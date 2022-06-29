@@ -17,7 +17,22 @@
   h4,
   h5,
   h6,
-  header {
+  header,
+  ul,
+  li,
+  main,
+  footer {
     @apply font-inter;
+  }
+}
+
+@layer utilities {
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
   }
 }

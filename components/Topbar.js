@@ -6,16 +6,16 @@ import ActiveLink from './ActiveLink';
 export default function Topbar() {
   return (
     <>
-      <div className="flex justify-between items-center px-5 md:px-10 bg-navBg py-7 border-b border-slate-400">
+      <div className="flex justify-between items-center px-5 md:px-10 bg-navBg border-b border-slate-400">
         <div className="flex justify-end items-center">
           <Link href="/">
-            <a className="text-3xl font-bold leading-5 text-navText">SHOP</a>
+            <a className="text-3xl font-bold leading-5 text-navText py-7">SHOP</a>
           </Link>
         </div>
-        <div className="hidden md:block">
+        <div className="hidden md:block h-full">
           <ul className="flex items-center uppercase font-normal font-inter">
             {topNavData.map((nav) => (
-              <li key={nav.label} className="mx-3">
+              <li key={nav.label} className="mx-3 h-full py-7 group">
                 <ActiveLink href={nav.value} label={nav.label} />
               </li>
             ))}
@@ -47,10 +47,6 @@ const topNavData = [
   {
     label: 'home',
     value: '/',
-  },
-  {
-    label: 'about us',
-    value: '/about',
   },
   {
     label: 'shop',

@@ -7,7 +7,7 @@ import ProductCard from './ProductCard';
 import Button from './Button';
 
 export default function BestSellingProducts() {
-  const { data, error } = useSWR(`${baseUrl}products`, fetcher);
+  const { data, error } = useSWR(`${baseUrl}/products`, fetcher);
   return (
     <section className="py-10 md:py-20">
       <SectionHeader

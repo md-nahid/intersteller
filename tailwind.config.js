@@ -10,6 +10,9 @@ module.exports = {
     fontFamily: {
       inter: "'Inter', sans-serif",
     },
+    boxShadow: {
+      mobileMenu: '0 -3px 4px rgb(0 0 0 / 10%)',
+    },
     screens: {
       xxs: '450px',
       xs: '575px',
