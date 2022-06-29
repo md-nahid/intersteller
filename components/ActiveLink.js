@@ -14,7 +14,7 @@ export default function ActiveLink({ href, label, dropdownIcon }) {
     } else {
       setActiveClass('');
     }
-  }, [router.asPath]);
+  }, [router.asPath, href]);
 
   return (
     <Link href={href}>

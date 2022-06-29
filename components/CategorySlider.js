@@ -1,11 +1,15 @@
 import { Icon } from '@iconify/react';
+import Image from 'next/image';
 
 export default function CategorySlider() {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-2 lg:gap-5 py-5 font-inter">
         <div className="group relative overflow-hidden">
-          <img
+          <Image
+            layout="responsive"
+            width={100}
+            height={80}
             src="https://i.ibb.co/6vrRbW0/mikkel-bech-yj-AFnk-Lt-KY0-unsplash.jpg"
             alt="icon"
             className="w-full h-full group-hover:scale-110 transition-all duration-500"
@@ -21,7 +25,10 @@ export default function CategorySlider() {
           </div>
         </div>
         <div className="group relative overflow-hidden">
-          <img
+          <Image
+            layout="responsive"
+            width={100}
+            height={80}
             src="https://i.ibb.co/Qcqq2Rb/one.jpg"
             alt="icon"
             className="w-full h-full group-hover:scale-110 transition-all duration-500"
@@ -39,7 +46,10 @@ export default function CategorySlider() {
           </div>
         </div>
         <div className="group relative overflow-hidden">
-          <img
+          <Image
+            layout="responsive"
+            width={100}
+            height={80}
             src="https://i.ibb.co/QYB2DtY/three.jpg"
             alt="icon"
             className="w-full h-full group-hover:scale-110 transition-all duration-500"
