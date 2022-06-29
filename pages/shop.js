@@ -8,7 +8,7 @@ import useWindowsize from '../hooks/useWindowsize';
 import ShopFilterMenuTop from '../components/ShopFilterMenuTop';
 import Filteroptions from '../components/Filteroptions';
 
-export default function shop() {
+export default function Shop() {
   const width = useWindowsize();
   const [priceRange, setPriceRange] = useState({
     min: 0,
