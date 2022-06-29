@@ -44,7 +44,7 @@ export default function Shop() {
         }}
         setSort={setSort}
       />
-      <div className="px-5 grid grid-cols-1 md:grid-cols-[250px_1fr] gap-5 relative">
+      <div className="px-5 grid grid-cols-1 md:grid-cols-[250px_1fr] gap-5 relative min-h-[500px]">
         <Filteroptions
           show={show}
           closeFilterMenu={() => setShow(false)}

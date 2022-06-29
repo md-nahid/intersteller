@@ -1,11 +1,14 @@
 import { Icon } from '@iconify/react';
+import Image from 'next/image';
 
 export default function ProductCard({ image, title, price }) {
   return (
     <>
       <div>
         <div className="group bg-slate-50 shadow h-72 2xl:h-96 p-2 flex justify-center items-center relative overflow-hidden">
-          <img
+          <Image
+            priority="low"
+            layout="fill"
             src={image}
             alt={title}
             className="w-full h-full object-contain group-hover:scale-90 duration-300"

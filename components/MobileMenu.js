@@ -61,8 +61,13 @@ function Drawer({ onClick }) {
             </li>
           ))}
         </ul>
-        <div className="flex justify-center">
-          <ButtonTwo label="close" onClick={onClick} />
+        <div className="text-center">
+          <button
+            className="px-2 py-1 bg-slate-700 text-slate-50 hover:bg-slate-600 rounded"
+            onClick={onClick}
+          >
+            close
+          </button>
         </div>
       </div>
     </>

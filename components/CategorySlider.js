@@ -7,6 +7,7 @@ export default function CategorySlider() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-2 lg:gap-5 py-5 font-inter">
         <div className="group relative overflow-hidden">
           <Image
+            priority
             layout="responsive"
             width={100}
             height={80}
@@ -26,6 +27,7 @@ export default function CategorySlider() {
         </div>
         <div className="group relative overflow-hidden">
           <Image
+            priority
             layout="responsive"
             width={100}
             height={80}
@@ -47,6 +49,7 @@ export default function CategorySlider() {
         </div>
         <div className="group relative overflow-hidden">
           <Image
+            priority
             layout="responsive"
             width={100}
             height={80}
