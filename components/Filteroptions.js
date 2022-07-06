@@ -1,41 +1,38 @@
-import { Icon } from '@iconify/react';
 import Accordion from './Accordion';
 import { motion, AnimatePresence } from 'framer-motion';
-import ButtonTwo from './ButtonTwo';
 import { shopFilterMenu } from './Alldata/FramerAnimation';
 import PriceRange from './PriceRange';
-import useWindowsize from '../hooks/useWindowsize';
+import RatingFilter from './RatingFilter';
+import BrandsFilter from './BrandsFilter';
 
 export default function Filteroptions({
   show,
-  closeFilterMenu,
   selected,
   setSelected,
   priceRange,
   onChange,
+  star,
+  setStar,
+  brand,
+  setBrand,
 }) {
-  const width = useWindowsize();
   return (
     <>
       <AnimatePresence>
         {show && (
           <motion.div
-            className="max-w-full md:max-w-sm w-full h-full bg-slate-200 bg-opacity-90 md:bg-opacity-100 md:bg-slate-100 py-5 absolute left-0 top-0 md:static z-10 overflow-hidden"
+            className=" bg-slate-200 bg-opacity-90 overflow-hidden"
             initial="initial"
             animate="animate"
             exit="initial"
             variants={shopFilterMenu}
           >
-            {width < 767 && (
-              <div className="flex justify-end mr-5 mb-5">
-                <ButtonTwo
-                  showIcon={<Icon icon="codicon:chrome-close" />}
-                  onClick={closeFilterMenu}
-                />
-              </div>
-            )}
-            <Accordion selected={selected} setSelected={setSelected} />
-            <PriceRange value={priceRange} onChange={onChange} />
+            <div className="py-5 grid grid-cols-1 xs:grid-cols-2 xmd:grid-cols-4 gap-5">
+              <Accordion selected={selected} setSelected={setSelected} />
+              <PriceRange value={priceRange} onChange={onChange} />
+              <RatingFilter star={star} setStar={setStar} />
+              <BrandsFilter brand={brand} setBrand={setBrand} />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -8,7 +8,7 @@ export default function CustomSelect({ options, onChange, instanceID }) {
         isSearchable={false}
         styles={customStyles}
         onChange={onChange}
-        placeholder="Select ..."
+        placeholder="select"
         instanceId={instanceID}
       />
     </>
@@ -23,7 +23,7 @@ const customStyles = {
   }),
   container: (provided, state) => ({
     ...provided,
-    minWidth: '150px',
+    minWidth: '100px',
   }),
   control: (provided, state) => ({
     ...provided,

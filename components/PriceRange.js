@@ -2,7 +2,7 @@ import cn from 'classnames';
 
 export default function PriceRange({ value, onChange }) {
   return (
-    <>
+    <div>
       <h4 className="pl-5 font-semibold underline mt-4">Price Filter</h4>
       <div className="grid grid-cols-2 gap-4 items-center px-5 mt-4">
         <span className="text-center">
@@ -32,6 +32,6 @@ export default function PriceRange({ value, onChange }) {
           />
         </span>
       </div>
-    </>
+    </div>
   );
 }
