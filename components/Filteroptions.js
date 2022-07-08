@@ -1,9 +1,11 @@
+import React from 'react';
 import Accordion from './Accordion';
 import { motion, AnimatePresence } from 'framer-motion';
 import { shopFilterMenu } from './Alldata/FramerAnimation';
 import PriceRange from './PriceRange';
 import RatingFilter from './RatingFilter';
 import BrandsFilter from './BrandsFilter';
+import { useEffect, useRef } from 'react';
 
 export default function Filteroptions({
   show,
@@ -16,8 +18,24 @@ export default function Filteroptions({
   brand,
   setBrand,
 }) {
+  const menu = useRef();
+  console.log(menu.current);
+  useEffect(() => {
+    if (window.innerWidth > 768) {
+      window.scrollTo({
+        top: menu.current.offsetTop - 140,
+        behavior: 'smooth',
+      });
+    } else {
+      window.scrollTo({
+        top: menu.current.offsetTop - 50,
+        behavior: 'smooth',
+      });
+    }
+  }, [show]);
+
   return (
-    <>
+    <div ref={menu}>
       <AnimatePresence>
         {show && (
           <motion.div
@@ -36,6 +54,6 @@ export default function Filteroptions({
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 }

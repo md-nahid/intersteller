@@ -2,10 +2,12 @@ import ProductCard from '../components/ProductCard';
 import SomethingWrong from '../components/SomethingWrong';
 import ProductContentLoader from '../components/ContentLoader/ProductContentLoader';
 import Button from '../components/Button';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import useApi from '../hooks/useApi';
 import ShopFilterMenuTop from '../components/ShopFilterMenuTop';
 import Filteroptions from '../components/Filteroptions';
+import ShopCard from '../components/ShopCard';
+import SectionTitle from '../components/SectionTitle';
 
 export default function Shop() {
   const [priceRange, setPriceRange] = useState({
@@ -18,12 +20,10 @@ export default function Shop() {
   const { data, isLoading, isError } = useApi(selected ? selected : '/products');
   const [sort, setSort] = useState('');
   const [show, setShow] = useState(false);
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [show]);
-
   return (
     <>
+      <SectionTitle title="shop" />
+      <ShopCard />
       <ShopFilterMenuTop
         show={show}
         setShow={setShow}
@@ -47,7 +47,7 @@ export default function Shop() {
         brand={brand}
         setBrand={setBrand}
       />
-      <div className="px-2">
+      <div className="px-2 md:px-5">
         {isError && (
           <div className="my-5 flex justify-center">
             <SomethingWrong />
