@@ -19,18 +19,19 @@ export default function Filteroptions({
   setBrand,
 }) {
   const menu = useRef();
-  console.log(menu.current);
   useEffect(() => {
-    if (window.innerWidth > 768) {
-      window.scrollTo({
-        top: menu.current.offsetTop - 140,
-        behavior: 'smooth',
-      });
-    } else {
-      window.scrollTo({
-        top: menu.current.offsetTop - 50,
-        behavior: 'smooth',
-      });
+    if (show) {
+      if (window.innerWidth > 768) {
+        window.scrollTo({
+          top: menu.current.offsetTop - 140,
+          behavior: 'smooth',
+        });
+      } else {
+        window.scrollTo({
+          top: menu.current.offsetTop - 50,
+          behavior: 'smooth',
+        });
+      }
     }
   }, [show]);
 
